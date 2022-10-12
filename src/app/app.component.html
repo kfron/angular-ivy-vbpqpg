@@ -1,0 +1,10 @@
+<p>header</p>
+<ng-container *ngIf="subject$ | async as subject">
+  <p>child</p>
+  <app-child [subject]="subject"></app-child>
+  <p>grandchild</p>
+  <app-middle-parent [subject]="subject"></app-middle-parent>
+</ng-container>
+<button (click)="newObj()">new object</button>
+<button (click)="increment()">increment option1</button>
+<button (click)="change()">change option2</button>
